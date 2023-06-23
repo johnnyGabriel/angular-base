@@ -1,0 +1,14 @@
+header {
+    background: #f35b5b;
+}
+.wrapper {
+    display: flex;
+}
+.wrapper aside {
+    flex-grow: 1;
+    background: #8282ff;
+}
+.wrapper .content {
+    flex-grow: 5;
+    background: #53a953;
+}
