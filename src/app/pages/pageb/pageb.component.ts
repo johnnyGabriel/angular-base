@@ -1,15 +1,18 @@
 import { Component, OnInit } from '@angular/core';
+import { BehaviorSubject, delay } from 'rxjs';
 
 @Component({
   selector: 'app-pageb',
   templateUrl: './pageb.component.html',
   styleUrls: ['./pageb.component.css']
 })
-export class PagebComponent implements OnInit {
+export class PagebComponent {
 
-  constructor() { }
+  showMessage = new BehaviorSubject(false);
+  showMessage$ = this.showMessage.asObservable().pipe(delay(500));
 
-  ngOnInit(): void {
+  handleClick() {
+    this.showMessage.next(true);
   }
 
 }
