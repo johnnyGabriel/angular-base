@@ -5,11 +5,14 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './pagec.component.html',
   styleUrls: ['./pagec.component.css']
 })
-export class PagecComponent implements OnInit {
+export class PagecComponent {
 
-  constructor() { }
+  showMessage = false;
 
-  ngOnInit(): void {
+  handleClick() {
+    setTimeout(() => {
+      this.showMessage = true;
+    }, 2000);
   }
 
 }

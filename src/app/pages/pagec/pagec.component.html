@@ -1,1 +1,4 @@
-<p>pagec works!</p>
+<button (click)="handleClick()">Click to show message after 2 sec</button>
+<ng-container *ngIf="showMessage">
+    <p>pagec works!</p>
+</ng-container>
