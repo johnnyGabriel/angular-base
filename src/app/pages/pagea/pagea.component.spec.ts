@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { PageaComponent } from './pagea.component';
+import { By } from '@angular/platform-browser';
 
 describe('PageaComponent', () => {
   let component: PageaComponent;
@@ -22,4 +23,16 @@ describe('PageaComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should show message when button clicked', () => {
+    const btnEl = fixture.debugElement.query(By.css('button'));
+    btnEl.triggerEventHandler('click', null);
+    
+    fixture.detectChanges();
+
+    const pEl = fixture.debugElement.query(By.css('p'));
+
+    expect(pEl).toBeTruthy();
+  });
+  
 });

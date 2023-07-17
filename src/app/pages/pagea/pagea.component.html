@@ -1,1 +1,4 @@
-<p>pagea works!</p>
+<button (click)="handleClick()">Click to show message</button>
+<ng-container *ngIf="showMessage">
+    <p>pagea works!</p>
+</ng-container>

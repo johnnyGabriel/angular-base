@@ -5,11 +5,12 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './pagea.component.html',
   styleUrls: ['./pagea.component.css']
 })
-export class PageaComponent implements OnInit {
+export class PageaComponent {
 
-  constructor() { }
+  showMessage = false;
 
-  ngOnInit(): void {
+  handleClick() {
+    this.showMessage = true;
   }
 
 }
